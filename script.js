@@ -72,7 +72,6 @@ function selected(){
     console.log(colorSelected);
 }
 
-
 function fill(){
     //alert("Clicked Fill All")
     let box = document.querySelectorAll("td"); // select all the boxes in the grid
@@ -85,7 +84,9 @@ function clearAll(){
     //alert("Clicked Clear All")
     let box = document.querySelectorAll("td"); // select all the boxes in the grid
     box.forEach(td => { // for each box in the grid
-        console.log(td.remove()); // remove the box 
+        console.log(td.remove()); // remove the box
+        console.log(numRows = 0); // reset the number of rows 
+        console.log(numCols = 0); // reset the number of columns 
     });
 }
 
