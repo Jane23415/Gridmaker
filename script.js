@@ -76,7 +76,7 @@ function selected(){
 function fill(){
     //alert("Clicked Fill All")
     let box = document.querySelectorAll("td"); // select all the boxes in the grid
-    box.forEach(td => {
+    box.forEach(td => { // for each box, change the background color to the selected color
         console.log(td.style.backgroundColor = colorSelected);
     });
 }
@@ -86,5 +86,12 @@ function clearAll(){
 }
 
 function fillU(){
-    alert("Clicked Fill All Uncolored")
+    //alert("Clicked Fill All Uncolored")
+    let box = document.querySelectorAll("td"); // select all the boxes in the grid
+    box.forEach(td => { // for each box, if the background color is not white or default
+        if (td.style.backgroundColor == "white" || td.style.backgroundColor == "") {
+            console.log(td.style.backgroundColor = colorSelected); // change color to the selected color
+        }
+        console.log(td); // else return box with its already colored background
+    });
 }
