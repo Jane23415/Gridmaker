@@ -2,8 +2,6 @@ let numRows = 0;
 let numCols = 0;
 let colorSelected;
 
-
-
 //Add a row(rows are tr tag and go down)
 function addR() {
     //declare relevant variables for function(doesn't work if declared outside of function)
@@ -62,18 +60,25 @@ function addC() {
 function removeR() {
     alert("Clicked Remove Row")
 }
+
 //Remove a column
 function removeC() {
     alert("Clicked Remove Col")
 }
+
 //sets global var for selected color
 function selected(){
     colorSelected = document.getElementById("selectedID").value;
     console.log(colorSelected);
 }
 
+
 function fill(){
-    alert("Clicked Fill All")
+    //alert("Clicked Fill All")
+    let box = document.querySelectorAll("td"); // select all the boxes in the grid
+    box.forEach(td => {
+        console.log(td.style.backgroundColor = colorSelected);
+    });
 }
 
 function clearAll(){
