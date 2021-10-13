@@ -2,7 +2,6 @@ let numRows = 0;
 let numCols = 0;
 let colorSelected;
 
-
 //Add a row(rows are tr tag and go down)
 function addR() {
     //declare relevant variables for function(doesn't work if declared outside of function)
