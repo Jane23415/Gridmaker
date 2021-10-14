@@ -58,7 +58,15 @@ function addC() {
 
 //Remove a row
 function removeR() {
-    alert("Clicked Remove Row")
+    let table = document.getElementById("grid")
+    let lastRow = table.lastElementChild
+    table.removeChild(lastRow)
+
+    numRows--
+    if(numRows === 0)
+        numCols = 0
+
+    console.log("row, col: ", numRows, numCols)
 }
 
 //Remove a column
