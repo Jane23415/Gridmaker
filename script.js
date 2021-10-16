@@ -17,6 +17,8 @@ function addR() {
         //if there are no rows or cols, adding one box will create a 1x1 grid, so update cols
         if(numRows === 0)
             numCols++
+
+    
     }
     
     //if there are cols, append 1 td to the new row for each col
@@ -29,6 +31,13 @@ function addR() {
 
     numRows++
     console.log("row, col: ", numRows, numCols)
+
+    //give all new td elements an onclick function to change color
+    let box = document.querySelectorAll("tr td")
+    for(let i = 0; i < box.length; i++)
+        box[i].onclick = function() {
+            console.log(this.style.backgroundColor = colorSelected);
+        }
 }
 //Add a column(columns are td tag and go right)
 function addC() {
@@ -54,6 +63,15 @@ function addC() {
     
     numCols++
     console.log("row, col: ", numRows, numCols)
+
+    //give all new td elements an onclick function to change color
+    let box = document.querySelectorAll("tr td")
+    for(let i = 0; i < box.length; i++)
+        box[i].onclick = function() {
+            console.log(this.style.backgroundColor = colorSelected);
+        }
+
+    
 }
 
 //Remove a row
