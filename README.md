@@ -1,4 +1,4 @@
-# Assignment-3
+# Assignment 3 - Gridmaker (DOM Example)
 
 Group Members - Mark Allman (markallman51)
 
